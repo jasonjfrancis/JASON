@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
     "start": "node server/index.js",
-    "install:all": "npm install --prefix server && npm install --prefix client"
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "build": "npm --prefix client run build"
   },
   "devDependencies": {
     "concurrently": "^8.0.0"
@@ -15,9 +16,11 @@
     "cors": "^2.8.5",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.0",
-    "axios": "^1.4.0"
+    "axios": "^1.4.0",
+    "serverless-http": "^3.0.0"
   }
   ,"engines": {
     "node": "24.x"
   }
+ 
 }
