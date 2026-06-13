@@ -1,0 +1,298 @@
+/* Color Palette Variables */
+:root {
+  --bg-main: #050505; /* Deepest Vantablack */
+  --bg-section: #111111; /* Rich Black */
+  --bg-card: #1A1A1A; /* Graphite Black */
+  --text-primary: #B89B5E; /* Antique Gold */
+  --text-accent: #7A1212; /* Deep Crimson Red */
+  --text-body: #F4F1EA; /* Warm Ivory */
+  --text-secondary: #D4D0C8; /* Ivory-grey */
+  --border-color: #2A2A2A; /* Graphite grey */
+  
+  /* Typography Variables */
+  --font-heading: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-body: 'Montserrat', 'Inter', sans-serif;
+}
+
+body { 
+  font-family: var(--font-body); 
+  font-weight: 400;
+  padding: 0; 
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-body);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin-top: 0;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.secondary-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.accent-text {
+  color: var(--text-accent);
+}
+
+/* Header & Navigation */
+.header {
+  background-color: var(--bg-section); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  height: 80px; /* Adjust based on preference */
+  object-fit: contain;
+}
+
+.header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.header a {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.header a:hover {
+  color: var(--text-accent);
+}
+
+.header a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  transition: width 0.3s ease;
+}
+
+.header a:hover::after {
+  width: 100%;
+}
+
+/* Sections & Content */
+.content {
+  flex: 1;
+  overflow: hidden;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: var(--bg-section);
+  padding: 4rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.section-1{
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.section-1:hover{
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.section-2{
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.section-2:hover{
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.section-3{
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.section-3:hover{
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.section-4{
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.section-4:hover{
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Section indicator line */
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 40px;
+  border-top-left-radius: 4px;
+}
+
+.card {
+  background-color: var(--bg-card);
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(122, 18, 18, 0.15); /* Crimson glow */
+  border-color: var(--text-accent);
+}
+
+.gallery-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  width: 100%;
+  padding: 2rem 1.5rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.gallery-overlay span {
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  position: relative;
+}
+
+.gallery-overlay span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 20px;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay span::after {
+  width: 100%;
+}
+
+/* Buttons */
+button { 
+  padding: 0.85rem 1.75rem; 
+  background-color: transparent;
+  color: var(--text-body);
+  border: 1px solid var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+button:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-main);
+}
+
+button.secondary {
+  border-color: var(--text-accent);
+}
+
+button.secondary:hover {
+  color: var(--text-body);
+}
+
+/* Footer */
+.footer { 
+  background-color: var(--bg-section);
+  padding: 2rem 4rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Spotify Profile specific styles */
+.app { max-width: 720px; }
+.controls { display:flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.profile { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.profile img { border-radius: 4px; border: 1px solid var(--border-color); }
+.error { color: var(--text-accent); margin-top: 1rem; }
