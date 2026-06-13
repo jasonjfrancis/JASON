@@ -17,4 +17,8 @@ app.use('/api/spotify', spotifyRoutes);
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
-app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
+if (require.main === module) {
+	app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
+}
+
+module.exports = app;
