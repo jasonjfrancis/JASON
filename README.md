@@ -1,6 +1,6 @@
-🌐 [Project Title]
+🌐 [JASON JFRANCIS: The Website]
 
-A brief, one-to-two sentence description of what your website does. Explain the primary problem it solves or the core experience it provides to the user.
+Welcome to the Jason JFRANCIS website, where you can get the showcase of the music, the performances, the gallery, and much more. This website serves as a central hub for the media, the music, and other showcases of the artist, Jason JFRANCIS.
 
 🔗 [Live Demo Link](<Paste Link here>)
 
@@ -8,11 +8,13 @@ A brief, one-to-two sentence description of what your website does. Explain the 
 
  ✨ Features
 
-Highlight the most important capabilities and pages of your website:
-User Authentication: Secure signup, login, and password resets.
-Responsive Design: Optimised fully for desktop, tablet, and mobile viewing.
-Dark Mode: Easy toggle switch between dark and light UI themes.
-Real-time Data: Live updates via API integration.
+Redirected links to applications like Spotify, Apple Music, and much more for the music part
+Personalised login section for the mailing list for a newsletter, events and more powerd by Laylo
+Designated media gallery for the visuals of the artist, Jason JFRANCIS
+Seamless transitions and premium/minimalistic fonting style throughout the website
+Dedicated landing pages for Mental Health, Palestine Donations and much more
+Dedicated section for contacting the team for any bookings, press, and more, and the same section to contact, send a message to connect, or a redirection to emailing via the favoured email applications. 
+
 
  🚀 Tech Stack
 
@@ -30,7 +32,7 @@ Prerequisites
 
 Make sure you have the following installed:
 * Node.js (v18.0.0 or higher)
-* npm or yarn
+* npm
 
 Installation & Setup
 
@@ -49,7 +51,7 @@ Installation & Setup
    Create a `.env` file in the root directory and add your keys:
    ```env
    REACT_APP_API_URL=https://reactjs.org
-   DATABASE_URL=your_database_connection_string
+   DATABASE_URL=<your_database_connection_string>
    ```
 
 4. Run the development server**
