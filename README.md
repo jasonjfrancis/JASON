@@ -48,7 +48,7 @@ Installation & Setup
 3. Set up environment variables**
    Create a `.env` file in the root directory and add your keys:
    ```env
-   REACT_APP_API_URL=https://example.com
+   REACT_APP_API_URL=https://reactjs.org
    DATABASE_URL=your_database_connection_string
    ```
 
